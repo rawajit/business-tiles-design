@@ -1,0 +1,39 @@
+# site settings
+title: تصميم موقع أعمال عربي
+subtitle: من قبل رواج الإتقان
+email: mirsal@rawajit.com
+description:  تصاميم وقوالب مواقع عربية حصرية
+baseurl: "" # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site
+author: Rawaj IT
+street_address: حي النسيم الغربي
+city: الرياض
+zip_code: 11492
+country: المملكة العربية السعودية
+phone: 054 119 3545
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings (key must match name of font awesome icon)
+# see https://fontawesome.com/icons?d=gallery&p=2&s=brands
+# Icons are not shown if value is empty
+# You need to restart jekyll for changes to have an effect
+socials:
+  Instagram: https://www.instagram.com/rawaj_it/
+  LinkedIn: https://www.linkedin.com/company/rawaj-it
+  Twitter: https://twitter.com/rawaj_it
+  Facebook: https://www.facebook.com/rawaj.info.tech/
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+- "*.gemspec"
+- LICENSE.md
+- CONTRIBUTING.md
+- README.md 

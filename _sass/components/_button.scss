@@ -1,0 +1,131 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', (
+			'background-color #{_duration(transition)} ease-in-out',
+			'box-shadow #{_duration(transition)} ease-in-out',
+			'color #{_duration(transition)} ease-in-out'
+		));
+		background-color: transparent;
+		border: 0;
+		border-radius: 0;
+		box-shadow: inset 0 0 0 2px _palette(fg-bold);
+		color: _palette(fg-bold);
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: _font(weight-bold);
+		height: 3.5em;
+		line-height: 3.5em;
+		padding: 0 1.75em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		&:hover, &:active {
+			box-shadow: inset 0 0 0 2px _palette(highlight);
+			color: _palette(highlight);
+		}
+
+		&:active {
+			background-color: transparentize(_palette(highlight), 0.9);
+			box-shadow: inset 0 0 0 2px desaturate(darken(_palette(highlight), 15), 5);
+			color: desaturate(darken(_palette(highlight), 15), 5);
+		}
+
+		&.icon {
+			&:before {
+				margin-right: 0.5em;
+			}
+		}
+
+		&.fit {
+			display: block;
+			margin: 0 0 (_size(element-margin) * 0.5) 0;
+			width: 100%;
+		}
+
+		&.small {
+			font-size: 0.6em;
+		}
+
+		&.big {
+			font-size: 1.25em;
+			height: 3em;
+			line-height: 3em;
+		}
+
+		&.next {
+			padding-left: 4.5em;
+			position: relative;
+
+			&:before, &:after {
+				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+				background-position: center right;
+				background-repeat: no-repeat;
+				background-size: 36px 24px;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				left: 1.5em;
+				top: 0;
+				vertical-align: middle;
+				width: 36px;
+			}
+
+			&:before {
+				background-image: svg-url('<svg fill="#ffffff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_92_" d="M111.213,165.004L250.607,25.607c5.858-5.858,5.858-15.355,0-21.213c-5.858-5.858-15.355-5.858-21.213,0.001 l-150,150.004C76.58,157.211,75,161.026,75,165.004c0,3.979,1.581,7.794,4.394,10.607l150,149.996 C232.322,328.536,236.161,330,240,330s7.678-1.464,10.607-4.394c5.858-5.858,5.858-15.355,0-21.213L111.213,165.004z"></path> </g></svg>');
+			}
+
+			&:after {
+				background-image: svg-url('<svg fill="#99c1f1" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" stroke="#99c1f1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_92_" d="M111.213,165.004L250.607,25.607c5.858-5.858,5.858-15.355,0-21.213c-5.858-5.858-15.355-5.858-21.213,0.001 l-150,150.004C76.58,157.211,75,161.026,75,165.004c0,3.979,1.581,7.794,4.394,10.607l150,149.996 C232.322,328.536,236.161,330,240,330s7.678-1.464,10.607-4.394c5.858-5.858,5.858-15.355,0-21.213L111.213,165.004z"></path> </g></svg>');
+				opacity: 0;
+				z-index: 1;
+			}
+
+			&:hover, &:active {
+				&:after {
+					opacity: 1;
+				}
+			}
+
+			@include breakpoint(large) {
+				padding-right: 5em;
+			}
+		}
+
+		&.special {
+			background-color: _palette(fg-bold);
+			box-shadow: none;
+			color: _palette(bg);
+
+			&:hover, &:active {
+				background-color: _palette(highlight);
+				color: _palette(bg) !important;
+			}
+
+			&:active {
+				background-color: desaturate(darken(_palette(highlight), 15), 5);
+			}
+		}
+
+		&.disabled,
+		&:disabled {
+			@include vendor('pointer-events', 'none');
+			cursor: default;
+			opacity: 0.25;
+		}
+	}
