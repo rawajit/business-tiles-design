@@ -3,7 +3,7 @@ title: تصميم موقع أعمال عربي
 subtitle: من قبل رواج الإتقان
 email: mirsal@rawajit.com
 description:  تصاميم وقوالب مواقع عربية حصرية
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/business-tiles-design" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Rawaj IT
 street_address: حي النسيم الغربي
